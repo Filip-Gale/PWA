@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/unos.css">
+    <link rel="shortcut icon" type="image/png" href="img/fav_logo.png"/>
+    <meta charset="UTF-8">
+    <title>BZ Unos</title>
+</head>
+<body>
+    <header>
+        <div id = "header_topRed" ></div>
+        <img id = "header_logo" src= "img/Logo_1200x574.png" alt="logo">
+    </header>
+    <nav>
+        <ul id = "nav_ul">
+            <li id ="nav_li_home" class="nav_li"><a href="index.php">Home</a></li>
+            <li class="nav_li"><a href="kategorija.php?id=sport">Sport</a></li>
+            <li class="nav_li"><a href="kategorija.php?id=kultura">Culture</a></li>
+            <li class="nav_li"><a href="admin.php">Admin</a></li>
+        </ul>
+    </nav>
+    <main>
+
+        <form enctype="multipart/form-data" method="post" action="unos.php">
+            <span id="porukaTitle" class="bojaPoruke"></span><br>
+            <label for="naslov">Naslov vijesti:</label><br>
+            <input type="text" id="naslov" name="naslov"/><br>
+            <span id="porukaAbout" class="bojaPoruke"></span><br>
+            <label for="kSad">Kratki sadržaj vijesti (do 50 znakova):</label><br>
+            <textarea id="kSad" name="kSad" rows="4" cols="50" maxlength="50"></textarea><br><br>
+            <span id="porukaContent" class="bojaPoruke"></span>
+            <label for="sad">Sadržaj vijesti:</label><br>
+            <textarea id="sad" name="sad" rows="4" cols="50"></textarea><br><br>
+            <span id="porukaSlika" class="bojaPoruke"></span><br>
+            <label for="picture">Slika</label><br>
+            <input type="file" id="picture" name="picture"/><br>
+            <span id="porukaKategorija" class="bojaPoruke"></span><br>
+            <label for="kategorija">Kategorija:</label><br>
+            <select name="kategorija" id="kategorija">
+                <option value="" disabled selected>Odabir kategorije</option>
+                <option value ="Sport">Sport</option>
+                <option value ="Kultura">Kultura</option>
+            </select><br>
+            <label for="archive">Spremiti u arhivu</label><br>
+            <input type="checkbox" name="archive" id="archive"><br>
+            <button type="reset" value="Poništi" >Poništi</button>
+            <button type="submit" value="Prihvati" id="prihvati">Prihvati</button>
+        </form> 
+        
+        <script>
+            // Provjera forme prije slanja
+            document.getElementById("prihvati").onclick= function(event) {
+                var slanjeForme= true;
+            // Naslov vjesti (5-30 znakova)
+            var poljeTitle= document.getElementById("naslov");
+            var title= document.getElementById("naslov").value;
+            if(title.length< 5 || title.length > 30) {
+                slanjeForme= false;
+                poljeTitle.style.border="1px dashed red";
+                document.getElementById("porukaTitle").innerHTML="Naslov vjesti mora imati između 5 i 30 znakova!<br>";
+                document.getElementById("porukaTitle").style.color = "red";
+            } else{
+                poljeTitle.style.border="1px solid green";
+                document.getElementById("porukaTitle").innerHTML="";
+            }// Kratki sadržaj (10-100 znakova)
+            var poljeAbout= document.getElementById("kSad");
+            var about= document.getElementById("kSad").value;
+            if(about.length< 10|| about.length> 100) {
+                slanjeForme= false;
+                poljeAbout.style.border="1px dashed red";
+                document.getElementById("porukaAbout").innerHTML="Kratki sadržaj mora imati između 10 i 100 znakova!<br>";
+                document.getElementById("porukaAbout").style.color = "red";
+            } else{
+                poljeAbout.style.border="1px solid green";
+                document.getElementById("porukaAbout").innerHTML="";
+            }
+            // Sadržaj mora biti unesen
+            var poljeContent= document.getElementById("sad");
+            var content= document.getElementById("sad").value;
+            if(content.length== 0) {
+                slanjeForme= false;
+                poljeContent.style.border="1px dashed red";
+                document.getElementById("porukaContent").innerHTML="Sadržaj mora biti unesen!<br>";
+                document.getElementById("porukaContent").style.color = "red";
+            } else{
+                poljeContent.style.border="1px solid green";
+                document.getElementById("porukaContent").innerHTML="";
+            }// Slika mora biti unesena
+            var poljeSlika= document.getElementById("picture");
+            var pphoto= document.getElementById("picture").value;
+            if(pphoto.length== 0) {
+                slanjeForme= false;
+                poljeSlika.style.border="1px dashed red";
+                document.getElementById("porukaSlika").innerHTML="Slika mora biti unesena!<br>";
+                document.getElementById("porukaSlika").style.color = "red";
+            } else{
+                poljeSlika.style.border="1px solid green";
+                document.getElementById("porukaSlika").innerHTML="";
+            }// Kategorija mora biti odabrana
+            var poljeCategory= document.getElementById("kategorija");
+            if(document.getElementById("kategorija").selectedIndex== 0) {
+                slanjeForme= false;
+                poljeCategory.style.border="1px dashed red";
+                document.getElementById("porukaKategorija").innerHTML="Kategorija mora biti odabrana!<br>";
+                document.getElementById("porukaKategorija").style.color = "red";
+            } else{
+                poljeCategory.style.border="1px solid green";
+                document.getElementById("porukaKategorija").innerHTML="";
+                }
+                if(slanjeForme!= true) {
+                    event.preventDefault();
+                }
+            };
+        </script>
+    </main>
+    <footer>
+        <div id = "footer_content" >
+            <div id= "footer_content_top"></div>
+            <div id= "footer_content_bottom">
+                <p>Author: Filip Gale</p>
+                <p>E-mail: fgale@tvz.hr</p>
+                <p>TVZ IRAČ, PWA 2021</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

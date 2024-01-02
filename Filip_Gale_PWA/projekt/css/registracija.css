@@ -1,0 +1,49 @@
+span{
+    color:red;
+}
+
+section{
+    background-color: white;
+    align-items: center;
+    padding:50px;
+    display: flex;
+    flex-direction: row;
+}
+
+button{
+    margin-top:20px;
+    color:white;
+    background-color: orange;
+    font-weight: bolder;
+    border-style: none;
+    padding:15px;
+}
+
+#login{
+    background-color: limegreen;
+}
+
+form{
+    width:50%;
+}
+
+
+#register_div{
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#regTekst, #ili{
+    color:limegreen;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.naslov{
+    width: 100%;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    margin-top:30px;
+}

@@ -1,0 +1,10 @@
+Dobar dan!
+
+Šifre svih korisnika su njihovo korisnièko ime.
+Možete dobiti admin privilegije pomoæu phpMyAdmin-a.
+Na samoj stranici nema nikakvog suèelja koje æe vam to omoguæiti.
+
+Ako stavite "projekt" u svoj "htdocs" direktorij, aplikacija bih trebala raditi.
+ 
+
+

@@ -1,0 +1,40 @@
+main{
+    background-color: white;
+}
+
+main * {
+    margin-top: 3px;
+}
+
+form{
+    padding:30px;
+}
+
+textarea, input{
+    background-color: #eee;
+}
+
+input, select{
+    margin-bottom: 30px;
+    padding:5px;
+}
+
+button{
+    padding: 15px;
+    border-width: 0;
+}
+
+button{
+    color: white;
+    background-color: red;
+}
+
+#prihvati{
+    background-color: green;
+}
+
+span{
+    color:red;
+    margin:0;
+    padding:0;
+}

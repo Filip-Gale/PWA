@@ -1,0 +1,140 @@
+main *{
+    margin: 0 auto;
+}
+
+
+form{
+    background-color: white;
+    margin-top: 30px;
+    align-items: center;
+    padding:10px;
+    width:50%;
+}
+
+button{
+    padding:10px;
+    margin-top:10px;
+    background-color: orange;
+    color: white;
+    border-style: none;
+
+}
+
+
+button:hover{
+    background-color: #ffec3d;
+    color:black
+}
+
+#brisanje{
+    background-color: red;
+    color: white;
+}
+
+#brisanje:hover{
+    background-color: rgb(255, 124, 124);
+    color: black;
+}
+
+
+
+#dodaj{
+    background-color: limegreen;
+    color: white;
+    border-style: none;
+    padding:15px;
+    min-width: 150px;
+    font-weight: bolder;
+    margin: 0;
+    margin-top: 20px;
+}
+
+#dodaj:hover{
+    background-color: greenyellow;
+    color: black;
+}
+
+#login{
+    padding:15px;
+    background-color: orange;
+    color: white;
+    border-style: none;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+#login:hover{
+    background-color: #ffe884;
+    color: black;
+}
+
+.naslov{
+    width: 100%;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    margin-top:30px;
+    padding:5px 0 5px 0;
+    max-width: 1000px;
+}
+
+.novi_racun{
+    background-color: white;
+    width:100%;
+    text-align: center;
+    max-width: 1000px;
+    padding-bottom: 10px;
+}
+
+.form-item{
+    width:100%;
+    margin-top: 10px;
+}
+
+label{
+    font-weight: bold;
+    color: orange;
+}
+
+
+#register_div{
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#regTekst, #ili{
+    color:limegreen;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.naslov{
+    width: 100%;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    margin-top:30px;
+}
+
+section{
+    background-color: white;
+    align-items: center;
+    padding:50px;
+    display: flex;
+    flex-direction: row;
+}
+
+#login2{
+    background-color: limegreen;
+    font-weight: bolder;
+    padding:15px;
+}
+
+#login2:hover{
+    background-color: greenyellow;
+}
+
+span{
+    color:red;
+}
